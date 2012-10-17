@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="477d9d54-e48d-4093-b2aa-895ba346cd41" name="Geri@GERI-PC 2012-10-17 01:29:31" runUser="Geri-PC\Geri" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="5dee1902-5545-44a3-ab58-14bfcf4814a5">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment enabled="false" runDeploymentRoot="Geri_GERI-PC 2012-10-17 01_29_31">
+      <DeploymentItem filename="F:\szakdoga\Moq.4.0.10827\NET40\Moq.dll" />
+      <DeploymentItem filename="F:\szakdoga\core\core\bin\Debug\core.dll" />
+      <DeploymentItem filename="F:\szakdoga\core\Services\bin\Debug\Services.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2012-10-17T01:29:31.4160156+02:00" queuing="2012-10-17T01:29:32.7919922+02:00" start="2012-10-17T01:29:33.0849609+02:00" finish="2012-10-17T01:29:34.9882812+02:00" />
+  <ResultSummary outcome="Completed">
+    <Counters total="1" executed="1" passed="1" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="testReceiveDamageShouldAliveWhenDamageLessThenHealtPoint" storage="f:\szakdoga\core\servicestests\bin\debug\servicestests.dll" id="012c7958-986e-2eeb-4d6a-a23ff77b7106">
+      <Execution id="10209632-42ed-4a52-8271-066c7603f3c2" />
+      <TestMethod codeBase="F:/szakdoga/core/ServicesTests/bin/Debug/ServicesTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ServicesTests.SimplePlayerServiceTest, ServicesTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="testReceiveDamageShouldAliveWhenDamageLessThenHealtPoint" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="012c7958-986e-2eeb-4d6a-a23ff77b7106" executionId="10209632-42ed-4a52-8271-066c7603f3c2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="10209632-42ed-4a52-8271-066c7603f3c2" testId="012c7958-986e-2eeb-4d6a-a23ff77b7106" testName="testReceiveDamageShouldAliveWhenDamageLessThenHealtPoint" computerName="GERI-PC" duration="00:00:00.0432750" startTime="2012-10-17T01:29:33.6542969+02:00" endTime="2012-10-17T01:29:34.6230469+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="10209632-42ed-4a52-8271-066c7603f3c2">
+    </UnitTestResult>
+  </Results>
+</TestRun>

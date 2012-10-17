@@ -1,0 +1,15 @@
+F:\szakdoga\core\ServicesTests\obj\Debug\ResolveAssemblyReference.cache
+F:\szakdoga\core\ServicesTests\bin\Debug\ServicesTests.dll
+F:\szakdoga\core\ServicesTests\bin\Debug\ServicesTests.pdb
+F:\szakdoga\core\ServicesTests\bin\Debug\core.dll
+F:\szakdoga\core\ServicesTests\bin\Debug\Moq.dll
+F:\szakdoga\core\ServicesTests\bin\Debug\Services.dll
+F:\szakdoga\core\ServicesTests\bin\Debug\Squid.dll
+F:\szakdoga\core\ServicesTests\bin\Debug\MTV3D65.dll
+F:\szakdoga\core\ServicesTests\bin\Debug\core.pdb
+F:\szakdoga\core\ServicesTests\bin\Debug\Services.pdb
+F:\szakdoga\core\ServicesTests\bin\Debug\Moq.pdb
+F:\szakdoga\core\ServicesTests\bin\Debug\Moq.xml
+F:\szakdoga\core\ServicesTests\bin\Debug\MTV3D65.xml
+F:\szakdoga\core\ServicesTests\obj\Debug\ServicesTests.dll
+F:\szakdoga\core\ServicesTests\obj\Debug\ServicesTests.pdb

@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="5228c87c-ebf5-485d-a72b-aac1d24fbc27" name="Geri@GERI-PC 2012-10-17 01:28:09" runUser="Geri-PC\Geri" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="5dee1902-5545-44a3-ab58-14bfcf4814a5">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment userDeploymentRoot="F:\szakdoga\core\TestResults" useDefaultDeploymentRoot="false" enabled="false" runDeploymentRoot="Geri_GERI-PC 2012-10-17 01_28_09">
+      <DeploymentItem filename="F:\szakdoga\Moq.4.0.10827\NET40\Moq.dll" />
+      <DeploymentItem filename="F:\szakdoga\core\core\bin\Debug\core.dll" />
+      <DeploymentItem filename="F:\szakdoga\core\Services\bin\Debug\Services.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2012-10-17T01:28:09.8349609+02:00" queuing="2012-10-17T01:28:18.1767578+02:00" start="2012-10-17T01:28:19.2197266+02:00" finish="2012-10-17T01:28:48.6914062+02:00" />
+  <ResultSummary outcome="Error">
+    <Counters total="1" executed="1" error="0" failed="0" timeout="0" aborted="1" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" passed="0" completed="0" inProgress="0" pending="0" />
+    <RunInfos>
+      <RunInfo computerName="GERI-PC" outcome="Error" timestamp="2012-10-17T01:28:48.5732422+02:00">
+        <Text>Test host process exited unexpectedly.</Text>
+      </RunInfo>
+    </RunInfos>
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="testReceiveDamageShouldAliveWhenDamageLessThenHealtPoint" storage="f:\szakdoga\core\servicestests\bin\debug\servicestests.dll" id="012c7958-986e-2eeb-4d6a-a23ff77b7106">
+      <Execution id="d2ceeb63-a559-4b28-984b-af77525b788b" />
+      <TestMethod codeBase="F:/szakdoga/core/ServicesTests/bin/Debug/ServicesTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ServicesTests.SimplePlayerServiceTest, ServicesTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="testReceiveDamageShouldAliveWhenDamageLessThenHealtPoint" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="012c7958-986e-2eeb-4d6a-a23ff77b7106" executionId="d2ceeb63-a559-4b28-984b-af77525b788b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="d2ceeb63-a559-4b28-984b-af77525b788b" testId="012c7958-986e-2eeb-4d6a-a23ff77b7106" testName="testReceiveDamageShouldAliveWhenDamageLessThenHealtPoint" computerName="GERI-PC" duration="00:00:28.8662109" startTime="2012-10-17T01:28:19.8232422+02:00" endTime="2012-10-17T01:28:48.6894531+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Aborted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d2ceeb63-a559-4b28-984b-af77525b788b">
+    </UnitTestResult>
+  </Results>
+</TestRun>

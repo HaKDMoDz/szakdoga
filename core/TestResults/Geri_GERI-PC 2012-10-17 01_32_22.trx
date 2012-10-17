@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="98db6715-e2a5-41bf-ac43-25e2d58d6499" name="Geri@GERI-PC 2012-10-17 01:32:22" runUser="Geri-PC\Geri" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="5dee1902-5545-44a3-ab58-14bfcf4814a5">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment enabled="false" runDeploymentRoot="Geri_GERI-PC 2012-10-17 01_32_22">
+      <DeploymentItem filename="F:\szakdoga\Moq.4.0.10827\NET40\Moq.dll" />
+      <DeploymentItem filename="F:\szakdoga\core\core\bin\Debug\core.dll" />
+      <DeploymentItem filename="F:\szakdoga\core\Services\bin\Debug\Services.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2012-10-17T01:32:22.8251953+02:00" queuing="2012-10-17T01:32:22.8593750+02:00" start="2012-10-17T01:32:23.3554687+02:00" finish="2012-10-17T01:32:25.0166016+02:00" />
+  <ResultSummary outcome="Failed">
+    <Counters total="1" executed="1" error="0" failed="1" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" passed="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="testReceiveDamageShouldDeadWhenDamageEqualsHealtPoint" storage="f:\szakdoga\core\servicestests\bin\debug\servicestests.dll" id="59289720-5014-da41-109e-0ea30b2efa15">
+      <Execution id="e5964b69-3c70-4b28-8b94-13f188c56a31" />
+      <TestMethod codeBase="F:/szakdoga/core/ServicesTests/bin/Debug/ServicesTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ServicesTests.SimplePlayerServiceTest, ServicesTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="testReceiveDamageShouldDeadWhenDamageEqualsHealtPoint" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="59289720-5014-da41-109e-0ea30b2efa15" executionId="e5964b69-3c70-4b28-8b94-13f188c56a31" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="e5964b69-3c70-4b28-8b94-13f188c56a31" testId="59289720-5014-da41-109e-0ea30b2efa15" testName="testReceiveDamageShouldDeadWhenDamageEqualsHealtPoint" computerName="GERI-PC" duration="00:00:00.0869898" startTime="2012-10-17T01:32:23.5869141+02:00" endTime="2012-10-17T01:32:24.6748047+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e5964b69-3c70-4b28-8b94-13f188c56a31">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.AreEqual failed. Expected:&lt;True&gt;. Actual:&lt;False&gt;. </Message>
+          <StackTrace>   at ServicesTests.SimplePlayerServiceTest.testReceiveDamageShouldDeadWhenDamageEqualsHealtPoint() in F:\szakdoga\core\ServicesTests\SimplePlayerServiceTest.cs:line 108
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>
