@@ -7,6 +7,7 @@ namespace core.Service
 {
     public interface CameraService
     {
-        void rotate();
+        void rotate(float cameraAngleX, float cameraAngleY);
+        void zoom(float cameraDistance);
     }
 }

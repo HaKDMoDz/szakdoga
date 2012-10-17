@@ -7,5 +7,6 @@ namespace core.Service
 {
     public interface ControllService
     {
+
     }
 }
