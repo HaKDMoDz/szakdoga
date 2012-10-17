@@ -14,13 +14,14 @@ namespace Services.PlayerServices
         private const int LOSE_GOLD_IN_TOWN = 2;
         private const int LOSE_GOLD_IN_PLACE = 5;
 
-        private Player player;
+        private Statistics statistics;
+        private Accessiries accessories;
 
-        public Player Player
+        public Statistics Statistics
         {
             set
             {
-                this.player = value;
+                this.statistics = value;
             }
         }
 
@@ -28,11 +29,11 @@ namespace Services.PlayerServices
         {
             if (location.Equals(RebirthLocation.TOWN))
             {
-                player.HealthPoint = player.MaxHealthPoint * 0.8f;
+                statistics.HealthPoint = statistics.MaxHealthPoint * 0.8f;
             }
             else
             {
-                player.HealthPoint = player.MaxHealthPoint * 0.8f;
+                statistics.HealthPoint = statistics.MaxHealthPoint * 0.8f;
             }
         }
 
@@ -48,8 +49,8 @@ namespace Services.PlayerServices
 
         public void receiveDamage(float damage)
         {
-            player.HealthPoint -= damage;
-            if (player.HealthPoint <= 0)
+            statistics.HealthPoint -= damage;
+            if (statistics.HealthPoint <= 0)
             {
                 playerDead();
             }
@@ -57,7 +58,7 @@ namespace Services.PlayerServices
 
         private void playerDead()
         {
-            player.IsDead = true;
+            statistics.IsDead = true;
         }
     }
 }

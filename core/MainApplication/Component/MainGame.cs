@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using core;
 using Squid;
-using core.Component;
+using core.Service;
 
 namespace MainApplication.Component
 {

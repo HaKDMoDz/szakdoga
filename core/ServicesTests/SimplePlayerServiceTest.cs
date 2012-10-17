@@ -67,9 +67,9 @@ namespace ServicesTests
         public void testReceiveDamageShouldAliveWhenDamageLessThanHealtPoint()
         {
             //given
-            Player player = new Player(null);
+            Statistics player = new Statistics(null);
             player.HealthPoint = 10;
-            underTest.Player = player;
+            underTest.Statistics = player;
 
             //when
             underTest.receiveDamage(2);
@@ -82,9 +82,9 @@ namespace ServicesTests
         public void testReceiveDamageShouldDeadWhenDamageMoreThanHealtPoint()
         {
             //given
-            Player player = new Player(null);
+            Statistics player = new Statistics(null);
             player.HealthPoint = 5;
-            underTest.Player = player;
+            underTest.Statistics = player;
 
             //when
             underTest.receiveDamage(7);
@@ -97,9 +97,9 @@ namespace ServicesTests
         public void testReceiveDamageShouldDeadWhenDamageEqualsHealtPoint()
         {
             //given
-            Player player = new Player(null);
+            Statistics player = new Statistics(null);
             player.HealthPoint = 7;
-            underTest.Player = player;
+            underTest.Statistics = player;
 
             //when
             underTest.receiveDamage(7);

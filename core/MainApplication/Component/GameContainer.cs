@@ -51,7 +51,7 @@ namespace MainApplication.Component
         private void initServices()
         {
             playerService = new SimplePlayerService();
-            ((SimplePlayerService)playerService).Player = player;
+            ((SimplePlayerService)playerService).Statistics = player;
 
             itemRepository = new MemoryItemRepository();
 
