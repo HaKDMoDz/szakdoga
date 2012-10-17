@@ -8,6 +8,7 @@ namespace core.Domain
     public class Player : DrawableGameComponent
     {
         private float healtPoint;
+        private float maxHealtPoint;
         private bool isDead;
 
         public float HealthPoint
@@ -21,6 +22,19 @@ namespace core.Domain
                 return healtPoint;
             }
         }
+
+        public float MaxHealthPoint
+        {
+            set
+            {
+                maxHealtPoint = value;
+            }
+            get
+            {
+                return maxHealtPoint;
+            }
+        }
+
         public bool IsDead
         {
             set

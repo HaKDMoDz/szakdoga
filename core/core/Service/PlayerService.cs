@@ -8,7 +8,7 @@ namespace core.Service
 {
     public interface PlayerService
     {        
-        void rebirth();
+        void rebirth(RebirthLocation location);
         void receiveDamage(float damage);
         void kill();
         void attack();

@@ -9,6 +9,11 @@ namespace Services.PlayerServices
 {
     public class SimplePlayerService : PlayerService
     {
+        private const int LOSE_XP_IN_TOWN = 5;
+        private const int LOSE_XP_IN_PLACE = 10;
+        private const int LOSE_GOLD_IN_TOWN = 2;
+        private const int LOSE_GOLD_IN_PLACE = 5;
+
         private Player player;
 
         public Player Player
@@ -19,14 +24,21 @@ namespace Services.PlayerServices
             }
         }
 
-        public void rebirth()
+        public void rebirth(RebirthLocation location)
         {
-            throw new NotImplementedException();
+            if (location.Equals(RebirthLocation.TOWN))
+            {
+                player.HealthPoint = player.MaxHealthPoint * 0.8f;
+            }
+            else
+            {
+                player.HealthPoint = player.MaxHealthPoint * 0.8f;
+            }
         }
 
         public void kill()
         {
-            throw new NotImplementedException();
+            playerDead();
         }
 
         public void attack()

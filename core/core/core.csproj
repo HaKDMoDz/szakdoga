@@ -49,8 +49,10 @@
   <ItemGroup>
     <Compile Include="Domain\Player.cs" />
     <Compile Include="Domain\QuestName.cs" />
+    <Compile Include="Domain\RebirthLocation.cs" />
     <Compile Include="Domain\Skill.cs" />
     <Compile Include="Domain\SkillName.cs" />
+    <Compile Include="Repository\Constants.cs" />
     <Compile Include="Service\BackpackService.cs" />
     <Compile Include="Service\CameraService.cs" />
     <Compile Include="Component\Container.cs" />
@@ -76,6 +78,7 @@
     <Compile Include="RenderOpt.cs" />
     <Compile Include="Service\WindowService.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
