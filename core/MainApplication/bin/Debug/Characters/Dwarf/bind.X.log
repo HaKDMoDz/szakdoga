@@ -1,0 +1,47 @@
+@0,000002: Output file name: E:\C#\Szakdoga\Game\Game\Game\bin\x86\Debug\Model\Dwarf\bind.X
+@0,000036: kW X-port: 3ds max compatible version 9,00
+@9,823801: Saving node: root
+@9,823914: Saving node: Bip01
+@9,823986: Saving node: Bip01_Pelvis
+@9,824057: Saving node: Bip01_Spine
+@9,824562: Saving node: Bip01_L_Thigh
+@9,824699: Saving node: Bip01_L_Calf
+@9,824771: Saving node: Bip01_L_Foot
+@9,824839: Saving node: Bip01_L_Toe0
+@9,824915: Saving node: Bip01_R_Thigh
+@9,824984: Saving node: Bip01_R_Calf
+@9,825050: Saving node: Bip01_R_Foot
+@9,825116: Saving node: Bip01_R_Toe0
+@9,825184: Saving node: Bip01_Spine1
+@9,825252: Saving node: Bip01_Neck
+@9,825321: Saving node: Bip01_Head
+@9,825385: Saving node: Jaw
+@9,825452: Saving node: Beard
+@9,825520: Saving node: Bip01_L_Clavicle
+@9,825588: Saving node: Bip01_L_UpperArm
+@9,825656: Saving node: Bip01_L_Forearm
+@9,825723: Saving node: Bip01_L_Hand
+@9,825790: Saving node: Bip01_L_Finger0
+@9,826078: Saving node: Bip01_L_Finger01
+@9,826166: Saving node: Bip01_L_Finger1
+@9,826235: Saving node: Bip01_L_Finger11
+@9,826302: Saving node: tag_lefthand
+@9,826370: Saving node: tag_leftarm
+@9,826442: Saving node: Bip01_R_Clavicle
+@9,826516: Saving node: Bip01_R_UpperArm
+@9,826584: Saving node: Bip01_R_Forearm
+@9,826651: Saving node: Bip01_R_Hand
+@9,826718: Saving node: Bip01_R_Finger0
+@9,826787: Saving node: Bip01_R_Finger01
+@9,826863: Saving node: Bip01_R_Finger1
+@9,826931: Saving node: Bip01_R_Finger11
+@9,826998: Saving node: tag_righthand
+@9,827067: Saving node: Bone02
+@9,827135: Saving node: Bone14
+@9,827201: Saving node: Bone18
+@9,854403: Saving node: dwarves_undead_01
+@9,858556: Limiting exported UV coordinates to 1 because of available maps.
+@9,928485: 1101 skinned vertices in dwarves_undead_01
+@9,941208: Material 0 shader returned effect file name 'null'
+@9,942359: Extracting animation bind.
+@9,957803: File E:\C#\Szakdoga\Common\Modellek\Undead_Dwarves\dwarves_undead_01.dds has same mod time as E:\C#\Szakdoga\Game\Game\Game\bin\x86\Debug\Model\Dwarf\dwarves_undead_01.dds; not copying.
