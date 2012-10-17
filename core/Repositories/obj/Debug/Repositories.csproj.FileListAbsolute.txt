@@ -1,0 +1,12 @@
+F:\szakdoga\core\Repositories\obj\Debug\ResolveAssemblyReference.cache
+F:\szakdoga\core\Repositories\bin\Debug\Repositories.dll
+F:\szakdoga\core\Repositories\bin\Debug\Repositories.pdb
+F:\szakdoga\core\Repositories\bin\Debug\core.dll
+F:\szakdoga\core\Repositories\bin\Debug\Services.dll
+F:\szakdoga\core\Repositories\bin\Debug\Squid.dll
+F:\szakdoga\core\Repositories\bin\Debug\MTV3D65.dll
+F:\szakdoga\core\Repositories\bin\Debug\core.pdb
+F:\szakdoga\core\Repositories\bin\Debug\Services.pdb
+F:\szakdoga\core\Repositories\bin\Debug\MTV3D65.xml
+F:\szakdoga\core\Repositories\obj\Debug\Repositories.dll
+F:\szakdoga\core\Repositories\obj\Debug\Repositories.pdb
