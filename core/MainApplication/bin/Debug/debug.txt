@@ -1,26 +1,26 @@
-10-17-2012 01:26:52 | --------------------------------------------
-10-17-2012 01:26:52 | Truevision3D Debug/Log File
-10-17-2012 01:26:52 | --------------------------------------------
-10-17-2012 01:26:52 | Engine Version : 6.5
-10-17-2012 01:26:52 | ENGINE INFO : DLL Compilation time Nov 11 2009 23:25:02
-10-17-2012 01:26:52 | DEVICE INIT : Initialize Depth
-10-17-2012 01:26:52 | DEVICE INIT : Initializing the device in windowed mode, with a render surface size of 1006x723, format 22, depthbuffer 75
-10-17-2012 01:26:52 | VIEWPORT MANAGER : Main viewport initialization
-10-17-2012 01:26:52 | VIEWPORT MANAGER : Main viewport initialized (1006x723)
-10-17-2012 01:26:52 | DEVICE INIT : Initialization successful !
-10-17-2012 01:26:52 | DEVICE INFO :  3D Card : NVIDIA GeForce 9500 GT (Microsoft Corporation - WDDM v1.1)  | Card ID : 1600 | Driver ID : 729489
-10-17-2012 01:26:52 | DEVICE INFO : Available texture memory : 2276 MB
-10-17-2012 01:26:52 | DEVICE INFO : Vertex Shaders 3.0 supported in hardware.
-10-17-2012 01:26:52 | DEVICE INFO : Pixel Shaders 3.0 supported in hardware.
-10-17-2012 01:26:52 | DEVICE INFO : Driver used is a DirectX9-level driver 'nvd3dum.dll'. Excellent
-10-17-2012 01:26:52 | DEVICE INFO : Card Type Geforce6xxx/7xxx/8xxx/ATIRadeonX1xxx  Level card, third generation of programmable card
-10-17-2012 01:26:52 | TEXTURE MANAGER : Format of alpha texture changed to 21.
-10-17-2012 01:26:52 | TEXTURE MANAGER : Format of non-alpha texture changed to 22.
-10-17-2012 01:26:52 | ACTOR MANAGER : LoadTVA : Couldn't find texture 'undead_dwarf_corrupt_body.dds' referenced in the model
-10-17-2012 01:26:52 | ACTOR MANAGER : LoadTVA : Couldn't find texture 'undead_dwarf_corrupt_shoulder.dds' referenced in the model
-10-17-2012 01:26:52 | ACTOR MANAGER : TVA Actor 'Characters/Dwarf/idle.TVA' successfully loaded in 15 ms
-10-17-2012 01:26:52 | ACTOR MANAGER : LoadTVA : Couldn't find texture 'undead_dwarf_corrupt_body.dds' referenced in the model
-10-17-2012 01:26:52 | ACTOR MANAGER : LoadTVA : Couldn't find texture 'undead_dwarf_corrupt_shoulder.dds' referenced in the model
-10-17-2012 01:26:52 | ACTOR MANAGER : TVA Actor 'Characters/Dwarf/idle.TVA' successfully loaded in 16 ms
-10-17-2012 01:26:56 | START UNLOAD
-10-17-2012 01:26:56 | RESOURCE MANAGER : Engine successfully unloaded
+10-17-2012 22:28:45 | --------------------------------------------
+10-17-2012 22:28:45 | Truevision3D Debug/Log File
+10-17-2012 22:28:45 | --------------------------------------------
+10-17-2012 22:28:45 | Engine Version : 6.5
+10-17-2012 22:28:45 | ENGINE INFO : DLL Compilation time Nov 11 2009 23:25:02
+10-17-2012 22:28:45 | DEVICE INIT : Initialize Depth
+10-17-2012 22:28:45 | DEVICE INIT : Initializing the device in windowed mode, with a render surface size of 1006x723, format 22, depthbuffer 75
+10-17-2012 22:28:45 | VIEWPORT MANAGER : Main viewport initialization
+10-17-2012 22:28:45 | VIEWPORT MANAGER : Main viewport initialized (1006x723)
+10-17-2012 22:28:45 | DEVICE INIT : Initialization successful !
+10-17-2012 22:28:45 | DEVICE INFO :  3D Card : NVIDIA GeForce 9500 GT (Microsoft Corporation - WDDM v1.1)  | Card ID : 1600 | Driver ID : 729489
+10-17-2012 22:28:45 | DEVICE INFO : Available texture memory : 2276 MB
+10-17-2012 22:28:45 | DEVICE INFO : Vertex Shaders 3.0 supported in hardware.
+10-17-2012 22:28:45 | DEVICE INFO : Pixel Shaders 3.0 supported in hardware.
+10-17-2012 22:28:45 | DEVICE INFO : Driver used is a DirectX9-level driver 'nvd3dum.dll'. Excellent
+10-17-2012 22:28:45 | DEVICE INFO : Card Type Geforce6xxx/7xxx/8xxx/ATIRadeonX1xxx  Level card, third generation of programmable card
+10-17-2012 22:28:45 | TEXTURE MANAGER : Format of alpha texture changed to 21.
+10-17-2012 22:28:45 | TEXTURE MANAGER : Format of non-alpha texture changed to 22.
+10-17-2012 22:28:45 | ACTOR MANAGER : LoadTVA : Couldn't find texture 'undead_dwarf_corrupt_body.dds' referenced in the model
+10-17-2012 22:28:45 | ACTOR MANAGER : LoadTVA : Couldn't find texture 'undead_dwarf_corrupt_shoulder.dds' referenced in the model
+10-17-2012 22:28:45 | ACTOR MANAGER : TVA Actor 'Characters/Dwarf/idle.TVA' successfully loaded in 0 ms
+10-17-2012 22:28:45 | ACTOR MANAGER : LoadTVA : Couldn't find texture 'undead_dwarf_corrupt_body.dds' referenced in the model
+10-17-2012 22:28:45 | ACTOR MANAGER : LoadTVA : Couldn't find texture 'undead_dwarf_corrupt_shoulder.dds' referenced in the model
+10-17-2012 22:28:45 | ACTOR MANAGER : TVA Actor 'Characters/Dwarf/idle.TVA' successfully loaded in 16 ms
+10-17-2012 22:28:47 | START UNLOAD
+10-17-2012 22:28:47 | RESOURCE MANAGER : Engine successfully unloaded

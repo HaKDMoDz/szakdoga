@@ -14,3 +14,5 @@ F:\szakdoga\core\MainApplication\obj\x86\Debug\MainApplication.pdb
 F:\szakdoga\core\MainApplication\bin\Debug\MainApplication.exe.config
 F:\szakdoga\core\MainApplication\bin\Debug\Services.dll
 F:\szakdoga\core\MainApplication\bin\Debug\Services.pdb
+F:\szakdoga\core\MainApplication\bin\Debug\Repositories.dll
+F:\szakdoga\core\MainApplication\bin\Debug\Repositories.pdb

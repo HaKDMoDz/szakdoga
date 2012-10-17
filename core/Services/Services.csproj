@@ -40,6 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CameraServices\FollowCameraService.cs" />
+    <Compile Include="ItemServices\SimpleItemService.cs" />
     <Compile Include="PlayerServices\SimplePlayerService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

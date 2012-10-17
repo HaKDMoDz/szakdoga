@@ -53,7 +53,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Component\Cameras\FollowCamera.cs" />
     <Compile Include="Component\Characters\Rancor.cs" />
     <Compile Include="Component\GameContainer.cs" />
     <Compile Include="Component\Land\Landscape.cs" />
@@ -85,6 +84,10 @@
     <ProjectReference Include="..\core\core.csproj">
       <Project>{7D14AAC5-A26F-437E-A183-B162047EE012}</Project>
       <Name>core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Repositories\Repositories.csproj">
+      <Project>{91768262-A654-43DF-82E7-C0F77D96C304}</Project>
+      <Name>Repositories</Name>
     </ProjectReference>
     <ProjectReference Include="..\Services\Services.csproj">
       <Project>{E804386E-2169-4B67-9BC7-B7FABF98F1DD}</Project>
