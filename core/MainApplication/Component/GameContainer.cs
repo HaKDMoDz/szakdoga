@@ -10,16 +10,23 @@ using MainApplication.Component.Cameras;
 using core.Domain;
 using core.Service;
 using Services.PlayerServices;
+using core.Repository;
+using Repositories.MemoryBaseRepository;
+using Services.ItemServices;
 
 namespace MainApplication.Component
 {
-    class GameContainer : Container
+    public class GameContainer : Container
     {
         private Game game;
 
         private Player player;
 
+        private Dictionary<String, Object> objects = new Dictionary<string, object>();
+
         private PlayerService playerService;
+        private ItemService itemService;
+        private ItemRepository itemRepository;
 
         public GameContainer(Game game)
         {
@@ -27,10 +34,10 @@ namespace MainApplication.Component
         }
         public void start()
         {
-            addComponent(new Player(game));
-            addComponent(new Rancor(game));
-            addComponent(new SunLigth(game));
-            addComponent(new FollowCamera(game));
+            //addComponent(new Player(game));
+            //addComponent(new Rancor(game));
+            //addComponent(new SunLigth(game));
+            //addComponent(new FollowCamera(game));
 
             initServices();
         }
@@ -44,7 +51,43 @@ namespace MainApplication.Component
         private void initServices()
         {
             playerService = new SimplePlayerService();
-            playerService.Player = player;
+            ((SimplePlayerService)playerService).Player = player;
+
+            itemRepository = new MemoryItemRepository();
+
+            itemService = new SimpleItemService();
+            ((SimpleItemService)itemService).ItemRepository = itemRepository;
+
+
+            registerObject("playerService", playerService);
+            registerObject("itemRepository", itemRepository);
+            registerObject("itemService", itemService);
+            
+        }
+
+        public T getObject<T>(string name)
+        {
+            Object obj = objects[name];
+
+            if (obj != null && obj is T)
+            {
+                T ret = (T)obj;
+                return ret;
+            }
+            else
+            {
+                throw new ArgumentException("Not valid type!");
+            }            
+        }
+
+        public void registerObject(String name, object obj)
+        {
+            objects.Add(name, obj);
+        }
+
+        public void removeObject(String name)
+        {
+            objects.Remove(name);
         }
     }
 }

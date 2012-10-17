@@ -12,6 +12,5 @@ namespace core.Service
         void receiveDamage(float damage);
         void kill();
         void attack();
-        Player Player { set; }
     }
 }
