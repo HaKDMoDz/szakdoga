@@ -10,9 +10,10 @@ namespace core.Component
     {
         private PlayerService playerService;
 
+        public Player(Game game) : base(game) { }
+
         public override void Update(GameTime time)
-        {
-            playerService.receiveDamage(10f);
+        {            
             base.Update(time);
         }
     }

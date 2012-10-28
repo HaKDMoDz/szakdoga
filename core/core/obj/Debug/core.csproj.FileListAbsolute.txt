@@ -1,8 +1,6 @@
 F:\szakdoga\core\core\obj\Debug\ResolveAssemblyReference.cache
 F:\szakdoga\core\core\bin\Debug\core.dll
 F:\szakdoga\core\core\bin\Debug\core.pdb
-F:\szakdoga\core\core\bin\Debug\MTV3D65.dll
-F:\szakdoga\core\core\bin\Debug\Squid.dll
 F:\szakdoga\core\core\bin\Debug\MTV3D65.xml
 F:\szakdoga\core\core\obj\Debug\core.dll
 F:\szakdoga\core\core\obj\Debug\core.pdb

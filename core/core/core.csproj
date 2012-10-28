@@ -48,17 +48,23 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Component\InputManager.cs" />
-    <Compile Include="Domain\Camera.cs" />
+    <Compile Include="Component\Player.cs" />
+    <Compile Include="Domain\BackpackItem.cs" />
+    <Compile Include="Domain\BoughtItem.cs" />
+    <Compile Include="Component\Camera.cs" />
+    <Compile Include="Domain\Accessiries.cs" />
+    <Compile Include="Domain\CameraStat.cs" />
     <Compile Include="Domain\Item.cs" />
     <Compile Include="Domain\ItemClass.cs" />
     <Compile Include="Domain\ItemName.cs" />
     <Compile Include="Domain\ItemType.cs" />
-    <Compile Include="Domain\Player.cs" />
+    <Compile Include="Domain\Statistics.cs" />
     <Compile Include="Domain\QuestName.cs" />
     <Compile Include="Domain\RebirthLocation.cs" />
     <Compile Include="Domain\Skill.cs" />
     <Compile Include="Domain\SkillName.cs" />
     <Compile Include="Domain\Vector3D.cs" />
+    <Compile Include="Repository\BackpackRepository.cs" />
     <Compile Include="Repository\Constants.cs" />
     <Compile Include="Repository\ItemNotFoundException.cs" />
     <Compile Include="Repository\ItemRepository.cs" />
