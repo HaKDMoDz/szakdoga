@@ -8,6 +8,7 @@ using core.Domain;
 using core;
 using Moq;
 using core.Service;
+using core.Component;
 
 namespace ServicesTests
 {
@@ -20,10 +21,11 @@ namespace ServicesTests
         private SimplePlayerService underTest;
         private CombatService combatService;
         private Statistics statistics;
+        private Landscape landscape;
 
         public SimplePlayerServiceTest()
         {
-            underTest = new SimplePlayerService(combatService, statistics);
+            underTest = new SimplePlayerService(combatService, statistics, landscape);
         }
 
         private TestContext testContextInstance;
