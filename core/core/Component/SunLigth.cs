@@ -6,9 +6,9 @@ using core;
 using core.Component;
 using core.Service;
 
-namespace MainApplication.Component.Land
+namespace core.Component
 {
-    class SunLigth : GameComponent, LightService
+    public class SunLigth : GameComponent, LightService
     {
         public SunLigth(Game game)
             : base(game)
