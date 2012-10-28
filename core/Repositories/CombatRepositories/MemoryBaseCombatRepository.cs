@@ -27,7 +27,17 @@ namespace Repositories.CombatRepositories
 
         public Skill getSkill(CONST_TV_KEY key)
         {
-            return skills[key];
+            Skill skill = null;
+            try
+            {
+                skill = skills[key];
+            }
+            catch
+            {
+                //throw new SkillSlotEmptyException("This slot is empty!");
+            }
+            
+            return skill;
         }
 
         public Dictionary<CONST_TV_KEY, Skill> getAllSkill()
