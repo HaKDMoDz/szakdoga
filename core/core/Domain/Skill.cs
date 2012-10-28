@@ -9,7 +9,31 @@ namespace core.Domain
     public class Skill
     {
         private SkillStrategy attackStrategy;
+        private SkillName skillName;
+        private SkillType skillCast;
 
+        public SkillName SkillName
+        {
+            get
+            {
+                return skillName;
+            }
+            set
+            {
+                skillName = value;
+            }
+        }
+        public SkillType SkillType
+        {
+            get
+            {
+                return skillCast;
+            }
+            set
+            {
+                skillCast = value;
+            }
+        }
         public SkillStrategy AttackStrategy
         {
             get
@@ -24,7 +48,7 @@ namespace core.Domain
 
         public void use(Character target)
         {
-
+            attackStrategy.use(target, this);
         }
     }
 }
