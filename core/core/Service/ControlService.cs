@@ -5,7 +5,7 @@ using System.Text;
 
 namespace core.Service
 {
-    public interface ControllService
+    public interface ControlService
     {
 
     }
