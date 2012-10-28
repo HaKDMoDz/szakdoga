@@ -40,7 +40,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MemoryBaseRepository\MemoryItemRepository.cs" />
+    <Compile Include="BackpackRepositories\BackPackItemNotFound.cs" />
+    <Compile Include="BackpackRepositories\MemoryBaseBackpackRepository.cs" />
+    <Compile Include="BackpackRepositories\NotEnoughtItemException.cs" />
+    <Compile Include="ItemRepositories\MemoryItemRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
