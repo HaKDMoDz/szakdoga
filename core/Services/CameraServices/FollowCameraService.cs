@@ -4,53 +4,79 @@ using System.Linq;
 using System.Text;
 using core.Service;
 using core.Domain;
+using core.Component;
+using MTV3D65;
+using core;
 
 namespace Services.CameraServices
 {
     public class FollowCameraService : CameraService
     {
-        private Camera camera;
+        private CameraStat cameraStat;
 
-        public FollowCameraService(Camera camera)
+        private InputManager inputManager;
+
+        public FollowCameraService(CameraStat cameraStat, InputManager inputManager)
         {
-            this.camera = camera;
+            this.cameraStat = cameraStat;
+            this.inputManager = inputManager;
         }
 
-        public Camera Camera
+
+        public CameraStat CameraStat
         {
             set
             {
-                this.camera = value;
+                this.cameraStat = value;
             }
         }
 
-        public void rotate(float cameraAngleX, float cameraAngleY)
+        private void rotate()
         {
-            if (InputManager.RightMouseButton)
+            if (inputManager.RightMouseButton)
             {
-                InputManager.CameraAngleX += InputManager.MouseX / 15.0f;
-                InputManager.CameraAngleY -= InputManager.MouseY / 15.0f;
+                cameraStat.AngleX += inputManager.MouseX / 15.0f;
+                cameraStat.AngleY -= inputManager.MouseY / 15.0f;
             }
-
-            
-
-            Rotate(InputManager.CameraDistance, InputManager.CameraAngleX, InputManager.CameraAngleY);
         }
 
-        public void zoom(float cameraDistance, float scroll)
+        private void zoom()
         {
-            if (cameraDistance <= 8)
+            if (cameraStat.Distance <= 8)
             {
-                cameraDistance = 9;
+                cameraStat.Distance = 9;
             }
-            if (cameraDistance > 50)
+            if (cameraStat.Distance > 50)
             {
-                cameraDistance = 50;
+                cameraStat.Distance = 50;
             }
-            if (cameraDistance <= 50 && cameraDistance > 8)
+            if (cameraStat.Distance <= 50 && cameraStat.Distance > 8)
             {
-                cameraDistance += scroll / 80f;
+                cameraStat.Distance += inputManager.Scroll / 80f;
             }
+        }
+
+        private void calculate()
+        {
+            TV_3DVECTOR oldCameraPos = cameraStat.Position;
+            TV_3DVECTOR cameraPosNew = Game.Math.MoveAroundPoint(cameraStat.LookAt, cameraStat.Distance, cameraStat.AngleX, cameraStat.AngleY);
+
+
+            //if (GlobalMethods.Distance(cameraPosNew,
+            //    new TV_3DVECTOR(cameraPosNew.x, Landscape.GetHeight(cameraPosNew.x, cameraPosNew.z), cameraPosNew.z)) > 2 &&
+            //    cameraPosNew.y > Landscape.GetHeight(cameraPosNew.x, cameraPosNew.z))
+            {
+                cameraStat.Position = cameraPosNew;
+            }
+        }
+
+        public CameraStat calcualteCameraStat()
+        {
+            rotate();
+            zoom();
+            calculate();
+
+            return cameraStat;
         }
     }
 }
