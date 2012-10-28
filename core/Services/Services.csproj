@@ -31,6 +31,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MTV3D65, Version=6.5.3602.42214, Culture=neutral, PublicKeyToken=50ecc2ceb76bb228">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\TV3D SDK 6.5\sdk\dotnet\MTV3D65.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -40,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BackpackServices\SimpleBackpackService.cs" />
     <Compile Include="CameraServices\FollowCameraService.cs" />
     <Compile Include="ItemServices\SimpleItemService.cs" />
     <Compile Include="PlayerServices\SimplePlayerService.cs" />
