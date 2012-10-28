@@ -16,12 +16,14 @@ namespace Services.CameraServices
 
         private InputManager inputManager;
 
-        public FollowCameraService(CameraStat cameraStat, InputManager inputManager)
+        private PlayerService playerService;
+
+        public FollowCameraService(CameraStat cameraStat, InputManager inputManager, PlayerService playerService)
         {
             this.cameraStat = cameraStat;
             this.inputManager = inputManager;
+            this.playerService = playerService;
         }
-
 
         public CameraStat CameraStat
         {
@@ -72,6 +74,7 @@ namespace Services.CameraServices
 
         public CameraStat calcualteCameraStat()
         {
+            cameraStat.LookAt = playerService.getPosition();
             rotate();
             zoom();
             calculate();
