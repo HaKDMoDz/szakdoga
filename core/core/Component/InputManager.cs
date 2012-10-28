@@ -3,15 +3,76 @@ using MTV3D65;
 using Squid;
 using core;
 using core.Service;
+using core.input;
 
-namespace GameClient
+namespace core.Component
 {
     public class InputManager : GameComponent
     {
         private int LastScroll;
         private TV_KEYDATA[] KeyBuffer;
 
-        private CameraService cameraService;
+        private bool rightMouseButton, leftMouseButton, dummy, middleMouseButton;
+        private int mouseX, mouseY, mouseScroll;
+        private int mAbsPosX, mAbsPosY;
+
+        private CombatService combatService;
+
+        public CombatService CombatService
+        {
+            set
+            {
+                combatService = value;
+            }
+        }
+
+        public bool MiddleMouseButton
+        {
+            get
+            {
+               return  middleMouseButton;
+            }
+        }
+
+        public bool RightMouseButton
+        {
+            get
+            {
+                return rightMouseButton;
+            }
+        }
+
+        public bool LeftMouseButton
+        {
+            get
+            {
+                return leftMouseButton;
+            }
+        }
+
+        public float MouseX
+        {
+            get
+            {
+                return mouseX;
+            }
+        }
+
+        public float MouseY
+        {
+            get
+            {
+                return mouseY;
+            }
+        }
+
+        public float Scroll
+        {
+            get
+            {
+                return mouseScroll;
+            }
+        }
 
         public InputManager(Game game)
             : base(game)
@@ -22,9 +83,6 @@ namespace GameClient
         public override void Load()
         {
             base.Load();
-            CameraDistance = 20;
-            CameraAngleX = 180;
-            CameraAngleY = -30;
         }
 
         public override void Update(GameTime time)
@@ -53,15 +111,56 @@ namespace GameClient
             GUI.SetKeyboard(keys);
             GUI.TimeElapsed = time.ElapsedMilliseconds;
 
-            cameraService.zoom(scroll);
-            cameraService.rotate(scroll);
+            calculateCamera();
+            checkCombatButtons();
 
             base.Update(time);
         }
 
+        private void checkCombatButtons()
+        {
+            if (KeyBoard.KeyPressed(CONST_TV_KEY.TV_KEY_F1))
+            {
+
+            }
+            else if (KeyBoard.KeyPressed(CONST_TV_KEY.TV_KEY_F2))
+            {
+            }
+            else if (KeyBoard.KeyPressed(CONST_TV_KEY.TV_KEY_F3))
+            {
+            }
+            else if (KeyBoard.KeyPressed(CONST_TV_KEY.TV_KEY_F4))
+            {
+            }
+            else if (KeyBoard.KeyPressed(CONST_TV_KEY.TV_KEY_F5))
+            {
+            }
+            else if (KeyBoard.KeyPressed(CONST_TV_KEY.TV_KEY_F6))
+            {
+            }
+            else if (KeyBoard.KeyPressed(CONST_TV_KEY.TV_KEY_F7))
+            {
+            }
+            else if (KeyBoard.KeyPressed(CONST_TV_KEY.TV_KEY_F8))
+            {
+            }
+            else if (KeyBoard.KeyPressed(CONST_TV_KEY.TV_KEY_F9))
+            {
+            }
+            else if (KeyBoard.KeyPressed(CONST_TV_KEY.TV_KEY_F10))
+            {
+            }
+            else if (KeyBoard.KeyPressed(CONST_TV_KEY.TV_KEY_F11))
+            {
+            }
+            else if (KeyBoard.KeyPressed(CONST_TV_KEY.TV_KEY_F12))
+            {
+            }
+        }
+
         private void calculateCamera()
         {
-            Game.Input.GetMouseState(ref MouseX, ref MouseY, ref LeftMouseButton, ref RightMouseButton, ref MiddleMouseButton, ref Dummy, ref MouseScroll);
+            Game.Input.GetMouseState(ref mouseX, ref mouseY, ref leftMouseButton, ref rightMouseButton, ref middleMouseButton, ref dummy, ref mouseScroll);
             
         }
     }
