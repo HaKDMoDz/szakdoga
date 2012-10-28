@@ -11,19 +11,29 @@ namespace Services.CombatServices
 {
     public class SimpleCombatService : CombatService
     {
-        private CombatRepository combabatRepository;
+        private CombatRepository combatRepository;
 
-        public CombatRepository CombabatRepository
+        public CombatRepository CombatRepository
         {
             set
             {
-                combabatRepository = value;
+                combatRepository = value;
             }
+        }
+
+        public SimpleCombatService(CombatRepository combatRepository)
+        {
+            this.combatRepository = combatRepository;
         }
 
         public Skill getSkill(CONST_TV_KEY key)
         {
-            return combabatRepository.getSkill(key);
+            return combatRepository.getSkill(key);
+        }
+
+        public void useSkill(Character target, Skill skill)
+        {            
+            skill.use(target);
         }
     }
 }
