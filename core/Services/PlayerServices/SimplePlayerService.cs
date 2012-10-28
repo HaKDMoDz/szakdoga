@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using core.Service;
 using core.Domain;
+using core.Service.attack;
 
 namespace Services.PlayerServices
 {
@@ -15,7 +16,7 @@ namespace Services.PlayerServices
         private const int LOSE_GOLD_IN_PLACE = 5;
 
         private Statistics statistics;
-        private Accessiries accessories;
+        private Accessories accessories;
 
         public Statistics Statistics
         {
@@ -42,11 +43,6 @@ namespace Services.PlayerServices
             playerDead();
         }
 
-        public void attack()
-        {
-            throw new NotImplementedException();
-        }
-
         public void receiveDamage(float damage)
         {
             statistics.HealthPoint -= damage;
@@ -59,6 +55,12 @@ namespace Services.PlayerServices
         private void playerDead()
         {
             statistics.IsDead = true;
+        }
+
+
+        public void useSkill(SkillStrategy skillStrategy)
+        {
+            skillStrategy.use();
         }
     }
 }
