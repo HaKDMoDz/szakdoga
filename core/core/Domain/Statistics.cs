@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using MTV3D65;
 
 namespace core.Domain
 {
@@ -10,6 +11,19 @@ namespace core.Domain
         private float healtPoint;
         private float maxHealtPoint;
         private bool isDead;
+        private TV_3DVECTOR position;
+
+        public TV_3DVECTOR Position
+        {
+            get
+            {
+                return position;
+            }
+            set
+            {
+                position = value;
+            }
+        }
 
         public float HealthPoint
         {

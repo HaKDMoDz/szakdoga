@@ -53,10 +53,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Component\Characters\Rancor.cs" />
     <Compile Include="Component\GameContainer.cs" />
-    <Compile Include="Component\Land\Landscape.cs" />
-    <Compile Include="Component\Land\SunLigth.cs" />
     <Compile Include="Component\MainGame.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

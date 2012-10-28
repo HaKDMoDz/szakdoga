@@ -6,6 +6,7 @@ using core.Service;
 using core.Domain;
 using core.Service.attack;
 using MTV3D65;
+using core.Component;
 
 namespace Services.PlayerServices
 {
@@ -19,6 +20,15 @@ namespace Services.PlayerServices
         private Statistics statistics;
         private Accessories accessories;
         private CombatService combatService;
+        private Landscape landscape;
+
+        public Landscape Landscape
+        {
+            set
+            {
+                landscape = value;
+            }
+        }
 
         public CombatService CombatService
         {
@@ -36,10 +46,11 @@ namespace Services.PlayerServices
             }
         }
 
-        public SimplePlayerService(CombatService combatService, Statistics statistics)
+        public SimplePlayerService(CombatService combatService, Statistics statistics, Landscape landscape)
         {
             this.combatService = combatService;
             this.statistics = statistics;
+            this.landscape = landscape;
         }
 
         public void rebirth(RebirthLocation location)
@@ -80,6 +91,13 @@ namespace Services.PlayerServices
             {
                 combatService.useSkill(new Statistics(), skill);
             }
+        }
+
+        public TV_3DVECTOR getPosition()
+        {
+            TV_3DVECTOR ret = statistics.Position;
+            ret.y = landscape.GetHeight(ret.x, ret.z);
+            return ret;
         }
     }
 }

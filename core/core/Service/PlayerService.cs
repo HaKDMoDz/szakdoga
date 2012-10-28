@@ -14,5 +14,6 @@ namespace core.Service
         void receiveDamage(float damage);
         void kill();
         void useSkill(CONST_TV_KEY key);
+        TV_3DVECTOR getPosition();
     }
 }

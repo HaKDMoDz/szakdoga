@@ -48,6 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Component\InputManager.cs" />
+    <Compile Include="Component\Landscape.cs" />
     <Compile Include="Component\Player.cs" />
     <Compile Include="Domain\BackpackItem.cs" />
     <Compile Include="Domain\BoughtItem.cs" />
@@ -65,6 +66,7 @@
     <Compile Include="Domain\RebirthLocation.cs" />
     <Compile Include="Domain\Skill.cs" />
     <Compile Include="Domain\SkillName.cs" />
+    <Compile Include="Component\SunLigth.cs" />
     <Compile Include="Domain\Vector3D.cs" />
     <Compile Include="Repository\BackpackRepository.cs" />
     <Compile Include="Repository\CombatRepository.cs" />
