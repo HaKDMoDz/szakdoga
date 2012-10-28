@@ -13,6 +13,10 @@ using core.Repository;
 using Services.ItemServices;
 using Repositories.ItemRepositories;
 using Services.CameraServices;
+using core.input;
+using Services.CombatServices;
+using Repositories.CombatRepositories;
+using Services.Attack;
 
 namespace MainApplication.Component
 {
@@ -31,6 +35,9 @@ namespace MainApplication.Component
         private CameraService cameraService;
         private ItemRepository itemRepository;
         private InputManager inputManager;
+        private KeyBoard keyBoard;
+        private CombatService combatService;
+        private CombatRepository combatRepository;
 
 
         private Camera camera;
@@ -73,6 +80,9 @@ namespace MainApplication.Component
         {
             camera.CameraStat = cameraStat;
             camera.CameraService = cameraService;
+            inputManager.PlayerService = playerService;
+            ((SimpleItemService)itemService).ItemRepository = itemRepository;
+            
         }
 
         private void initComponent()
@@ -83,6 +93,8 @@ namespace MainApplication.Component
             addComponent(new SunLigth(game));
             inputManager = new InputManager(game);
             addComponent(inputManager);
+            keyBoard = new KeyBoard(game);
+            addComponent(keyBoard);
         }
 
         private void addComponent(GameComponent component)
@@ -92,22 +104,20 @@ namespace MainApplication.Component
 
         private void initServices()
         {
-            playerService = new SimplePlayerService();
-            ((SimplePlayerService)playerService).Statistics = statistics;
-
+            combatRepository = new MemoryBaseCombatRepository();
+            combatService = new SimpleCombatService(combatRepository);
+            playerService = new SimplePlayerService(combatService, statistics);
+                       
             itemRepository = new MemoryItemRepository();
-
             itemService = new SimpleItemService();
-            ((SimpleItemService)itemService).ItemRepository = itemRepository;
-
             cameraService = new FollowCameraService(cameraStat, inputManager);
-
-
+            
             registerObject("playerService", playerService);
             registerObject("itemRepository", itemRepository);
             registerObject("itemService", itemService);
             registerObject("cameraService", cameraService);
-            
+            registerObject("combatRepository", combatRepository);
+            registerObject("combatService", combatService);            
         }
 
         public T getObject<T>(string name)
