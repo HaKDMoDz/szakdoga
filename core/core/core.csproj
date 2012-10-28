@@ -59,6 +59,7 @@
     <Compile Include="Domain\ItemClass.cs" />
     <Compile Include="Domain\ItemName.cs" />
     <Compile Include="Domain\ItemType.cs" />
+    <Compile Include="Domain\SkillType.cs" />
     <Compile Include="Domain\Statistics.cs" />
     <Compile Include="Domain\QuestName.cs" />
     <Compile Include="Domain\RebirthLocation.cs" />

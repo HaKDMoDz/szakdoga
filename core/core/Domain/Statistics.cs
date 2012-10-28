@@ -5,7 +5,7 @@ using System.Text;
 
 namespace core.Domain
 {
-    public class Statistics
+    public class Statistics : Character
     {
         private float healtPoint;
         private float maxHealtPoint;
@@ -45,6 +45,26 @@ namespace core.Domain
             {
                 return isDead;
             }
+        }
+
+        public void damage(float damage)
+        {
+            healtPoint -= damage;
+        }
+
+        public void addBuff()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void heal(float healtPoint)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void curse()
+        {
+            throw new NotImplementedException();
         }
     }
 }

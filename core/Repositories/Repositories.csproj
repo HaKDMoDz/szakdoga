@@ -48,6 +48,7 @@
     <Compile Include="BackpackRepositories\MemoryBaseBackpackRepository.cs" />
     <Compile Include="BackpackRepositories\NotEnoughtItemException.cs" />
     <Compile Include="CombatRepositories\MemoryBaseCombatRepository.cs" />
+    <Compile Include="CombatRepositories\SkillSlotEmptyException.cs" />
     <Compile Include="ItemRepositories\MemoryItemRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -7,5 +7,6 @@ namespace core.Domain
 {
     public enum SkillName
     {
+        HURRICANE
     }
 }
