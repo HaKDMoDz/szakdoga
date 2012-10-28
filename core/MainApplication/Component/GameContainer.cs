@@ -4,8 +4,6 @@ using System.Linq;
 using System.Text;
 using core.Component;
 using core;
-using MainApplication.Component.Land;
-using MainApplication.Component.Characters;
 using core.Domain;
 using core.Service;
 using Services.PlayerServices;
@@ -27,6 +25,7 @@ namespace MainApplication.Component
         private Player player;
         private Statistics statistics;
         private CameraStat cameraStat;
+        private Landscape landscape;
 
         private Dictionary<String, Object> objects = new Dictionary<string, object>();
 
@@ -82,19 +81,22 @@ namespace MainApplication.Component
             camera.CameraService = cameraService;
             inputManager.PlayerService = playerService;
             ((SimpleItemService)itemService).ItemRepository = itemRepository;
-            
+            player.PlayerService = playerService;
         }
 
         private void initComponent()
         {
+            landscape = new Landscape(game);
+            addComponent(landscape);
             camera = new Camera(game);
             addComponent(camera);
-            addComponent(new Rancor(game));
             addComponent(new SunLigth(game));
             inputManager = new InputManager(game);
             addComponent(inputManager);
             keyBoard = new KeyBoard(game);
             addComponent(keyBoard);
+            player = new Player(game);            
+            addComponent(player);
         }
 
         private void addComponent(GameComponent component)
@@ -106,11 +108,11 @@ namespace MainApplication.Component
         {
             combatRepository = new MemoryBaseCombatRepository();
             combatService = new SimpleCombatService(combatRepository);
-            playerService = new SimplePlayerService(combatService, statistics);
+            playerService = new SimplePlayerService(combatService, statistics, landscape);
                        
             itemRepository = new MemoryItemRepository();
             itemService = new SimpleItemService();
-            cameraService = new FollowCameraService(cameraStat, inputManager);
+            cameraService = new FollowCameraService(cameraStat, inputManager, playerService);
             
             registerObject("playerService", playerService);
             registerObject("itemRepository", itemRepository);
