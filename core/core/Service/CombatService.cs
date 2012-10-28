@@ -10,6 +10,6 @@ namespace core.Service
     public interface CombatService
     {
         Skill getSkill(CONST_TV_KEY key);
-        void useSkill(CONST_TV_KEY key);
+        void useSkill(Character target, Skill skill);
     }
 }

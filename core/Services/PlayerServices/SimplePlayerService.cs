@@ -5,6 +5,7 @@ using System.Text;
 using core.Service;
 using core.Domain;
 using core.Service.attack;
+using MTV3D65;
 
 namespace Services.PlayerServices
 {
@@ -17,6 +18,15 @@ namespace Services.PlayerServices
 
         private Statistics statistics;
         private Accessories accessories;
+        private CombatService combatService;
+
+        public CombatService CombatService
+        {
+            set
+            {
+                this.combatService = value;
+            }
+        }
 
         public Statistics Statistics
         {
@@ -24,6 +34,12 @@ namespace Services.PlayerServices
             {
                 this.statistics = value;
             }
+        }
+
+        public SimplePlayerService(CombatService combatService, Statistics statistics)
+        {
+            this.combatService = combatService;
+            this.statistics = statistics;
         }
 
         public void rebirth(RebirthLocation location)
@@ -57,10 +73,13 @@ namespace Services.PlayerServices
             statistics.IsDead = true;
         }
 
-
-        public void useSkill(SkillStrategy skillStrategy)
+        public void useSkill(CONST_TV_KEY key)
         {
-            skillStrategy.use();
+            Skill skill = combatService.getSkill(key);
+            if (skill != null)
+            {
+                combatService.useSkill(new Statistics(), skill);
+            }
         }
     }
 }

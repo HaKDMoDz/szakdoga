@@ -18,15 +18,11 @@ namespace core.input
             _currentKey = KeyBoard.GetPressedKey();
         }
 
-        public KeyBoard(core.Game game) : base(game) { }
+        public KeyBoard(Game game) : base(game) { }
 
         public static bool KeyPressed(MTV3D65.CONST_TV_KEY key)
         {
-            if (_lastKey != _currentKey && Game.Input.IsKeyPressed(key))
-            {
-                return true;
-            }
-            return false;
+            return (_lastKey != _currentKey && Game.Input.IsKeyPressed(key));            
         }
 
 

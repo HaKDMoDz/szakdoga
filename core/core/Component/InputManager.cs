@@ -16,13 +16,13 @@ namespace core.Component
         private int mouseX, mouseY, mouseScroll;
         private int mAbsPosX, mAbsPosY;
 
-        private CombatService combatService;
+        private PlayerService playerService;
 
-        public CombatService CombatService
+        public PlayerService PlayerService
         {
             set
             {
-                combatService = value;
+                playerService = value;
             }
         }
 
@@ -119,9 +119,10 @@ namespace core.Component
 
         private void checkCombatButtons()
         {
+            
             if (KeyBoard.KeyPressed(CONST_TV_KEY.TV_KEY_F1))
             {
-
+                playerService.useSkill(CONST_TV_KEY.TV_KEY_F1);
             }
             else if (KeyBoard.KeyPressed(CONST_TV_KEY.TV_KEY_F2))
             {
