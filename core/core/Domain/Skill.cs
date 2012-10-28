@@ -21,5 +21,10 @@ namespace core.Domain
                 attackStrategy = value;
             }
         }
+
+        public void use(Character target)
+        {
+
+        }
     }
 }

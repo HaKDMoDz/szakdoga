@@ -52,8 +52,9 @@
     <Compile Include="Domain\BackpackItem.cs" />
     <Compile Include="Domain\BoughtItem.cs" />
     <Compile Include="Component\Camera.cs" />
-    <Compile Include="Domain\Accessiries.cs" />
+    <Compile Include="Domain\Accessories.cs" />
     <Compile Include="Domain\CameraStat.cs" />
+    <Compile Include="Domain\Character.cs" />
     <Compile Include="Domain\Item.cs" />
     <Compile Include="Domain\ItemClass.cs" />
     <Compile Include="Domain\ItemName.cs" />
@@ -65,9 +66,11 @@
     <Compile Include="Domain\SkillName.cs" />
     <Compile Include="Domain\Vector3D.cs" />
     <Compile Include="Repository\BackpackRepository.cs" />
+    <Compile Include="Repository\CombatRepository.cs" />
     <Compile Include="Repository\Constants.cs" />
     <Compile Include="Repository\ItemNotFoundException.cs" />
     <Compile Include="Repository\ItemRepository.cs" />
+    <Compile Include="Service\attack\SkillStrategy.cs" />
     <Compile Include="Service\BackpackService.cs" />
     <Compile Include="Service\CameraService.cs" />
     <Compile Include="Service\Container.cs" />

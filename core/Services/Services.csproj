@@ -44,8 +44,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Attack\AttackSkill.cs" />
     <Compile Include="BackpackServices\SimpleBackpackService.cs" />
     <Compile Include="CameraServices\FollowCameraService.cs" />
+    <Compile Include="CombatServices\SimpleCombatService.cs" />
     <Compile Include="ItemServices\SimpleItemService.cs" />
     <Compile Include="PlayerServices\SimplePlayerService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
