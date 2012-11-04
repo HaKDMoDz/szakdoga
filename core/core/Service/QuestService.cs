@@ -10,5 +10,7 @@ namespace core.Service
     {
         void addQuest(QuestName questName);
         void removeQuest(QuestName questName);
+        void getReward(QuestName questName);
+        Quest getQuest(QuestName questName);
     }
 }
