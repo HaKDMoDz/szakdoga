@@ -10,7 +10,7 @@ namespace core.Component
 {
     public class Player : DrawableGameComponent
     {
-        TVActor actor;
+        private TVActor actor;
 
         private PlayerService playerService;
 
@@ -30,6 +30,8 @@ namespace core.Component
 
         public override void Update(GameTime time)
         {            
+            actor.LookAtPoint(playerService.getLookAtPoint());
+            setPosition(playerService.getPosition());
             base.Update(time);
         }
 
@@ -56,5 +58,11 @@ namespace core.Component
             actor.Render();
             base.Draw(time);
         }
+
+        private void setPosition(TV_3DVECTOR position)
+        {
+            actor.SetPosition(position.x, position.y, position.z);
+        }
+
     }
 }
