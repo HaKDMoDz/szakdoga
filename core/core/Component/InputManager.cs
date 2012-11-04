@@ -4,6 +4,7 @@ using Squid;
 using core;
 using core.Service;
 using core.input;
+using core.Domain;
 
 namespace core.Component
 {
@@ -16,21 +17,11 @@ namespace core.Component
         private int mouseX, mouseY, mouseScroll;
         private int mAbsPosX, mAbsPosY;
 
-        private PlayerService playerService;
-
-        public PlayerService PlayerService
-        {
-            set
-            {
-                playerService = value;
-            }
-        }
-
         public bool MiddleMouseButton
         {
             get
             {
-               return  middleMouseButton;
+                return middleMouseButton;
             }
         }
 
@@ -50,7 +41,7 @@ namespace core.Component
             }
         }
 
-        public float MouseX
+        public int MouseX
         {
             get
             {
@@ -58,7 +49,7 @@ namespace core.Component
             }
         }
 
-        public float MouseY
+        public int MouseY
         {
             get
             {
@@ -66,13 +57,40 @@ namespace core.Component
             }
         }
 
-        public float Scroll
+        public int MouseAbsX
+        {
+            get
+            {
+                return mAbsPosX;
+            }
+        }
+
+        public int MouseAbsY
+        {
+            get
+            {
+                return mAbsPosY;
+            }
+        }
+
+        public int Scroll
         {
             get
             {
                 return mouseScroll;
             }
         }
+
+        private PlayerService playerService;
+
+        public PlayerService PlayerService
+        {
+            set
+            {
+                playerService = value;
+            }
+        }
+
 
         public InputManager(Game game)
             : base(game)
@@ -88,16 +106,16 @@ namespace core.Component
         public override void Update(GameTime time)
         {
             bool[] buttons = new bool[4];
-            int mx = 0; int my = 0; int scroll = 0; int num = 0;
+            int scroll = 0; int num = 0;
 
-            Game.Input.GetAbsMouseState(ref mx, ref my, ref buttons[0], ref buttons[1], ref buttons[2], ref buttons[3], ref scroll);
+            Game.Input.GetAbsMouseState(ref mAbsPosX, ref mAbsPosY, ref buttons[0], ref buttons[1], ref buttons[2], ref buttons[3], ref scroll);
 
             int wheel = scroll > LastScroll ? -1 : (scroll < LastScroll ? 1 : 0);
             LastScroll = scroll;
 
             Game.Input.GetKeyBuffer(KeyBuffer, ref num);
 
-            GUI.SetMouse(mx, my, wheel);
+            GUI.SetMouse(mAbsPosX, mAbsPosY, wheel);
             GUI.SetButtons(buttons);
 
             KeyData[] keys = new KeyData[num];
@@ -162,7 +180,6 @@ namespace core.Component
         private void calculateCamera()
         {
             Game.Input.GetMouseState(ref mouseX, ref mouseY, ref leftMouseButton, ref rightMouseButton, ref middleMouseButton, ref dummy, ref mouseScroll);
-            
-        }
+       }
     }
 }
