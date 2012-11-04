@@ -16,6 +16,11 @@ using Services.CombatServices;
 using Repositories.CombatRepositories;
 using Services.Attack;
 using Services.ControlServices;
+using core.Windows;
+using Squid;
+using MainApplication.Scenes;
+using MainApplication.Windows;
+using Services.WindowServices;
 
 namespace MainApplication.Component
 {
@@ -29,6 +34,7 @@ namespace MainApplication.Component
         private Landscape landscape;
         private Movement movement;
         private MouseEvent mouseEvent;
+        private Desktop desktop;
 
         private Dictionary<String, Object> objects = new Dictionary<string, object>();
 
@@ -41,8 +47,11 @@ namespace MainApplication.Component
         private CombatService combatService;
         private CombatRepository combatRepository;
         private ControlService controlService;
+        private WindowService windowService;
 
         private Camera camera;
+
+        private Dictionary<SceneName, Scene> scenes = new Dictionary<SceneName, Scene>();
 
         public GameContainer(Game game)
         {
@@ -55,11 +64,18 @@ namespace MainApplication.Component
             initServices();
             injectDependency();
             loadComponents();
+
+
+            initScenes();
         }
 
         private void loadComponents()
         {
             foreach (var item in game.Components)
+            {
+                item.Load();
+            }
+            foreach (var item in scenes.Values)
             {
                 item.Load();
             }
@@ -85,11 +101,13 @@ namespace MainApplication.Component
             camera.CameraService = cameraService;
             inputManager.PlayerService = playerService;
             ((SimpleItemService)itemService).ItemRepository = itemRepository;
+            (windowService as SimpleWindowService).InputManager = inputManager;
             player.PlayerService = playerService;
             mouseEvent.InputManager = inputManager;
             movement.InputManager = inputManager;
             movement.ControlService = controlService;
             movement.MouseEvent = mouseEvent;
+            movement.WindowService = windowService;
         }
 
         private void initComponent()
@@ -109,6 +127,17 @@ namespace MainApplication.Component
             addComponent(movement);
 
             mouseEvent = new MouseEvent();
+            
+        }
+
+        private void initScenes()
+        {
+            desktop = new MainDesktop(windowService);
+            Scene scene = new GameScene(game, desktop);
+            scenes.Add(SceneName.GAMESCENE, scene);
+            addComponent(scene);
+
+            initWindows();
         }
 
         private void addComponent(GameComponent component)
@@ -125,6 +154,7 @@ namespace MainApplication.Component
             itemService = new SimpleItemService();
             cameraService = new FollowCameraService(cameraStat, inputManager, playerService);
             controlService = new SimpleControlService(statistics, landscape);
+            windowService = new SimpleWindowService();
             
             registerObject("playerService", playerService);
             registerObject("itemRepository", itemRepository);
@@ -132,7 +162,13 @@ namespace MainApplication.Component
             registerObject("cameraService", cameraService);
             registerObject("combatRepository", combatRepository);
             registerObject("combatService", combatService);
-            registerObject("controlService", controlService); 
+            registerObject("controlService", controlService);
+            registerObject("windowService", windowService); 
+        }
+
+        private void initWindows()
+        {
+            windowService.addWindow(WindowsName.PLAYERSTAT, new PlayerStatisticsWindow(desktop));
         }
 
         public T getObject<T>(string name)
