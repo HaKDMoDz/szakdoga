@@ -13,6 +13,7 @@ namespace core.Component
     public class Movement : GameComponent
     {
         private ControlService controlService;
+        private WindowService windowService;
         private InputManager inputManager;
         private MouseEvent mouseEvent;
         private TV_3DVECTOR targetPos;
@@ -36,6 +37,14 @@ namespace core.Component
             }
         }
 
+        public WindowService WindowService
+        {
+            set
+            {
+                windowService = value;
+            }
+        }
+
         public InputManager InputManager
         {
             set
@@ -47,7 +56,9 @@ namespace core.Component
         public override void Update(GameTime time)
         {
             TV_COLLISIONRESULT collResult = new TV_COLLISIONRESULT();
-            if (mouseEvent.Click() && Game.Scene.MousePickEx(inputManager.MouseAbsX, inputManager.MouseAbsY, ref collResult))
+            if (mouseEvent.Click() && 
+                Game.Scene.MousePickEx(inputManager.MouseAbsX, inputManager.MouseAbsY, ref collResult) &&
+                !windowService.clickInWindowArea())
             {
                 try
                 {
