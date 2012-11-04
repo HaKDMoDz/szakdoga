@@ -15,6 +15,7 @@ using core.input;
 using Services.CombatServices;
 using Repositories.CombatRepositories;
 using Services.Attack;
+using Services.ControlServices;
 
 namespace MainApplication.Component
 {
@@ -26,6 +27,8 @@ namespace MainApplication.Component
         private Statistics statistics;
         private CameraStat cameraStat;
         private Landscape landscape;
+        private Movement movement;
+        private MouseEvent mouseEvent;
 
         private Dictionary<String, Object> objects = new Dictionary<string, object>();
 
@@ -37,7 +40,7 @@ namespace MainApplication.Component
         private KeyBoard keyBoard;
         private CombatService combatService;
         private CombatRepository combatRepository;
-
+        private ControlService controlService;
 
         private Camera camera;
 
@@ -73,6 +76,7 @@ namespace MainApplication.Component
             statistics.HealthPoint = 100;
             statistics.IsDead = false;
             statistics.MaxHealthPoint = 100;
+            statistics.LookAtPoint = new MTV3D65.TV_3DVECTOR(100, 0, 200);
         }
 
         private void injectDependency()
@@ -82,6 +86,10 @@ namespace MainApplication.Component
             inputManager.PlayerService = playerService;
             ((SimpleItemService)itemService).ItemRepository = itemRepository;
             player.PlayerService = playerService;
+            mouseEvent.InputManager = inputManager;
+            movement.InputManager = inputManager;
+            movement.ControlService = controlService;
+            movement.MouseEvent = mouseEvent;
         }
 
         private void initComponent()
@@ -97,6 +105,10 @@ namespace MainApplication.Component
             addComponent(keyBoard);
             player = new Player(game);            
             addComponent(player);
+            movement = new Movement(game);
+            addComponent(movement);
+
+            mouseEvent = new MouseEvent();
         }
 
         private void addComponent(GameComponent component)
@@ -108,18 +120,19 @@ namespace MainApplication.Component
         {
             combatRepository = new MemoryBaseCombatRepository();
             combatService = new SimpleCombatService(combatRepository);
-            playerService = new SimplePlayerService(combatService, statistics, landscape);
-                       
+            playerService = new SimplePlayerService(combatService, statistics, landscape);                       
             itemRepository = new MemoryItemRepository();
             itemService = new SimpleItemService();
             cameraService = new FollowCameraService(cameraStat, inputManager, playerService);
+            controlService = new SimpleControlService(statistics, landscape);
             
             registerObject("playerService", playerService);
             registerObject("itemRepository", itemRepository);
             registerObject("itemService", itemService);
             registerObject("cameraService", cameraService);
             registerObject("combatRepository", combatRepository);
-            registerObject("combatService", combatService);            
+            registerObject("combatService", combatService);
+            registerObject("controlService", controlService); 
         }
 
         public T getObject<T>(string name)
