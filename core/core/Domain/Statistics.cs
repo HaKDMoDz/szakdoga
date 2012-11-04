@@ -12,6 +12,7 @@ namespace core.Domain
         private float maxHealtPoint;
         private bool isDead;
         private TV_3DVECTOR position;
+        private TV_3DVECTOR lookAtPoint;
 
         public TV_3DVECTOR Position
         {
@@ -79,6 +80,18 @@ namespace core.Domain
         public void curse()
         {
             throw new NotImplementedException();
+        }
+
+        public TV_3DVECTOR LookAtPoint
+        {
+            get
+            {
+                return lookAtPoint;
+            }
+            set
+            {
+                lookAtPoint = value;                    
+            }
         }
     }
 }
