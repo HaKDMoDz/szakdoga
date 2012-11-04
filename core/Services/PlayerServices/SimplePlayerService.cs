@@ -99,5 +99,10 @@ namespace Services.PlayerServices
             ret.y = landscape.GetHeight(ret.x, ret.z);
             return ret;
         }
+
+        public TV_3DVECTOR getLookAtPoint()
+        {
+            return statistics.LookAtPoint;
+        }
     }
 }
