@@ -47,9 +47,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Collision\Actor\ActorDetectCollision.cs" />
+    <Compile Include="Collision\CollisionFactory.cs" />
+    <Compile Include="Collision\DetectCollision.cs" />
+    <Compile Include="Collision\Landscape\LandscapeDetectCollision.cs" />
     <Compile Include="Component\InputManager.cs" />
     <Compile Include="Component\Landscape.cs" />
+    <Compile Include="Component\Movement.cs" />
     <Compile Include="Component\Player.cs" />
+    <Compile Include="Component\Scene.cs" />
+    <Compile Include="Domain\SceneName.cs" />
+    <Compile Include="Domain\WindowsName.cs" />
+    <Compile Include="Windows\TitleBar.cs" />
+    <Compile Include="Windows\WindowsBase.cs" />
     <Compile Include="Domain\BackpackItem.cs" />
     <Compile Include="Domain\BoughtItem.cs" />
     <Compile Include="Component\Camera.cs" />
@@ -60,6 +70,8 @@
     <Compile Include="Domain\ItemClass.cs" />
     <Compile Include="Domain\ItemName.cs" />
     <Compile Include="Domain\ItemType.cs" />
+    <Compile Include="Domain\MouseStatistics.cs" />
+    <Compile Include="Domain\Quest.cs" />
     <Compile Include="Domain\SkillType.cs" />
     <Compile Include="Domain\Statistics.cs" />
     <Compile Include="Domain\QuestName.cs" />
@@ -68,6 +80,7 @@
     <Compile Include="Domain\SkillName.cs" />
     <Compile Include="Component\SunLigth.cs" />
     <Compile Include="Domain\Vector3D.cs" />
+    <Compile Include="Input\MouseEvent.cs" />
     <Compile Include="Repository\BackpackRepository.cs" />
     <Compile Include="Repository\CombatRepository.cs" />
     <Compile Include="Repository\Constants.cs" />
@@ -78,7 +91,7 @@
     <Compile Include="Service\CameraService.cs" />
     <Compile Include="Service\Container.cs" />
     <Compile Include="Service\CombatService.cs" />
-    <Compile Include="Service\ControllService.cs" />
+    <Compile Include="Service\ControlService.cs" />
     <Compile Include="Service\CraftService.cs" />
     <Compile Include="Service\CreatureService.cs" />
     <Compile Include="Service\ItemService.cs" />
@@ -92,7 +105,7 @@
     <Compile Include="Game.cs" />
     <Compile Include="GameComponent.cs" />
     <Compile Include="GameTime.cs" />
-    <Compile Include="input\Keyboard.cs" />
+    <Compile Include="Input\Keyboard.cs" />
     <Compile Include="MessageBox.cs" />
     <Compile Include="NativeMethods.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

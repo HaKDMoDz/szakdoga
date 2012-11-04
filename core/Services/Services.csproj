@@ -35,6 +35,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Program Files (x86)\TV3D SDK 6.5\sdk\dotnet\MTV3D65.dll</HintPath>
     </Reference>
+    <Reference Include="Squid, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5ba804b1072f6e05, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>I:\Szakdoga\Game\Game\Game\bin\x86\Debug\Squid.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -48,9 +52,11 @@
     <Compile Include="BackpackServices\SimpleBackpackService.cs" />
     <Compile Include="CameraServices\FollowCameraService.cs" />
     <Compile Include="CombatServices\SimpleCombatService.cs" />
+    <Compile Include="ControlServices\SimpleControlService.cs" />
     <Compile Include="ItemServices\SimpleItemService.cs" />
     <Compile Include="PlayerServices\SimplePlayerService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WindowServices\SimpleWindowService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\core\core.csproj">

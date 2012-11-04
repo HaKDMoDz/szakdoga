@@ -1,36 +1,54 @@
-10-28-2012 18:21:08 | --------------------------------------------
-10-28-2012 18:21:08 | Truevision3D Debug/Log File
-10-28-2012 18:21:08 | --------------------------------------------
-10-28-2012 18:21:08 | Engine Version : 6.5
-10-28-2012 18:21:08 | ENGINE INFO : DLL Compilation time Nov 11 2009 23:25:02
-10-28-2012 18:21:08 | DEVICE INIT : Initialize Depth
-10-28-2012 18:21:08 | DEVICE INIT : Initializing the device in windowed mode, with a render surface size of 1006x723, format 22, depthbuffer 75
-10-28-2012 18:21:08 | VIEWPORT MANAGER : Main viewport initialization
-10-28-2012 18:21:08 | VIEWPORT MANAGER : Main viewport initialized (1006x723)
-10-28-2012 18:21:08 | DEVICE INIT : Initialization successful !
-10-28-2012 18:21:08 | DEVICE INFO :  3D Card : NVIDIA GeForce 9500 GT (Microsoft Corporation - WDDM v1.1)  | Card ID : 1600 | Driver ID : 729489
-10-28-2012 18:21:08 | DEVICE INFO : Available texture memory : 2276 MB
-10-28-2012 18:21:08 | DEVICE INFO : Vertex Shaders 3.0 supported in hardware.
-10-28-2012 18:21:08 | DEVICE INFO : Pixel Shaders 3.0 supported in hardware.
-10-28-2012 18:21:08 | DEVICE INFO : Driver used is a DirectX9-level driver 'nvd3dum.dll'. Excellent
-10-28-2012 18:21:08 | DEVICE INFO : Card Type Geforce6xxx/7xxx/8xxx/ATIRadeonX1xxx  Level card, third generation of programmable card
-10-28-2012 18:21:08 | TEXTURE MANAGER : Format of alpha texture changed to 21.
-10-28-2012 18:21:08 | TEXTURE MANAGER : Format of non-alpha texture changed to 22.
-10-28-2012 18:21:09 | TEXTURE MANAGER : Loading of 'Landscape/texture.dds' successful 'LandTexture' on index 2 
-10-28-2012 18:21:09 | LANDSCAPE : Landscape object #0 has been initialized
-10-28-2012 18:21:09 | LANDSCAPE : Generating landscape #0 from heightmap Landscape/landHM.png
-10-28-2012 18:21:10 | LANDSCAPE : 8x8 Landscape successfully generated with 270400 vertices and 1622400 indices in 1516 milliseconds.
-10-28-2012 18:21:10 | LANDSCAPE : Quadtree created for the landscape in 16 milliseconds.
-10-28-2012 18:21:10 | TERRAIN MANAGER : Switching to Expanded texture
-10-28-2012 18:21:11 | LAND MANAGER : Switching to Non Expanded texture
-10-28-2012 18:21:11 | TEXTURE MANAGER : Loading of 'Characters/Player/Man/body.png' successful 'Characters/Player/Man/body.png' on index 3 
-10-28-2012 18:21:11 | ACTOR MANAGER : TVA Actor 'Characters/Player/Man/bind.TVA' successfully loaded in 31 ms
-10-28-2012 18:21:11 | LANDSCAPE : Landscape object #1 has been initialized
-10-28-2012 18:21:11 | LANDSCAPE : Generating landscape #1 from heightmap Landscape/landHM.png
-10-28-2012 18:21:12 | LANDSCAPE : 8x8 Landscape successfully generated with 270400 vertices and 1622400 indices in 1312 milliseconds.
-10-28-2012 18:21:12 | LANDSCAPE : Quadtree created for the landscape in 16 milliseconds.
-10-28-2012 18:21:12 | TERRAIN MANAGER : Switching to Expanded texture
-10-28-2012 18:21:12 | LAND MANAGER : Switching to Non Expanded texture
-10-28-2012 18:21:12 | ACTOR MANAGER : TVA Actor 'Characters/Player/Man/bind.TVA' successfully loaded in 16 ms
-10-28-2012 18:21:31 | START UNLOAD
-10-28-2012 18:21:31 | RESOURCE MANAGER : Engine successfully unloaded
+11-04-2012 22:55:08 | --------------------------------------------
+11-04-2012 22:55:08 | Truevision3D Debug/Log File
+11-04-2012 22:55:08 | --------------------------------------------
+11-04-2012 22:55:08 | Engine Version : 6.5
+11-04-2012 22:55:08 | ENGINE INFO : DLL Compilation time Nov 11 2009 23:25:02
+11-04-2012 22:55:08 | DEVICE INIT : Initialize Depth
+11-04-2012 22:55:08 | DEVICE INIT : Initializing the device in windowed mode, with a render surface size of 1006x723, format 22, depthbuffer 75
+11-04-2012 22:55:08 | VIEWPORT MANAGER : Main viewport initialization
+11-04-2012 22:55:08 | VIEWPORT MANAGER : Main viewport initialized (1006x723)
+11-04-2012 22:55:08 | DEVICE INIT : Initialization successful !
+11-04-2012 22:55:08 | DEVICE INFO :  3D Card : NVIDIA GeForce 9500 GT (Microsoft Corporation - WDDM v1.1)  | Card ID : 1600 | Driver ID : 729489
+11-04-2012 22:55:08 | DEVICE INFO : Available texture memory : 2276 MB
+11-04-2012 22:55:08 | DEVICE INFO : Vertex Shaders 3.0 supported in hardware.
+11-04-2012 22:55:08 | DEVICE INFO : Pixel Shaders 3.0 supported in hardware.
+11-04-2012 22:55:08 | DEVICE INFO : Driver used is a DirectX9-level driver 'nvd3dum.dll'. Excellent
+11-04-2012 22:55:08 | DEVICE INFO : Card Type Geforce6xxx/7xxx/8xxx/ATIRadeonX1xxx  Level card, third generation of programmable card
+11-04-2012 22:55:08 | TEXTURE MANAGER : Format of alpha texture changed to 21.
+11-04-2012 22:55:08 | TEXTURE MANAGER : Format of non-alpha texture changed to 22.
+11-04-2012 22:55:09 | TEXTURE MANAGER : Loading of 'Landscape/texture.dds' successful 'LandTexture' on index 2 
+11-04-2012 22:55:09 | LANDSCAPE : Landscape object #0 has been initialized
+11-04-2012 22:55:09 | LANDSCAPE : Generating landscape #0 from heightmap Landscape/landHM.png
+11-04-2012 22:55:10 | LANDSCAPE : 8x8 Landscape successfully generated with 270400 vertices and 1622400 indices in 1203 milliseconds.
+11-04-2012 22:55:10 | LANDSCAPE : Quadtree created for the landscape in 16 milliseconds.
+11-04-2012 22:55:10 | TERRAIN MANAGER : Switching to Expanded texture
+11-04-2012 22:55:10 | LAND MANAGER : Switching to Non Expanded texture
+11-04-2012 22:55:10 | TEXTURE MANAGER : Loading of 'Characters/Player/Man/body.png' successful 'Characters/Player/Man/body.png' on index 3 
+11-04-2012 22:55:10 | ACTOR MANAGER : TVA Actor 'Characters/Player/Man/bind.TVA' successfully loaded in 31 ms
+11-04-2012 22:55:10 | LANDSCAPE : Landscape object #1 has been initialized
+11-04-2012 22:55:10 | LANDSCAPE : Generating landscape #1 from heightmap Landscape/landHM.png
+11-04-2012 22:55:11 | LANDSCAPE : 8x8 Landscape successfully generated with 270400 vertices and 1622400 indices in 1375 milliseconds.
+11-04-2012 22:55:11 | LANDSCAPE : Quadtree created for the landscape in 31 milliseconds.
+11-04-2012 22:55:11 | TERRAIN MANAGER : Switching to Expanded texture
+11-04-2012 22:55:12 | LAND MANAGER : Switching to Non Expanded texture
+11-04-2012 22:55:12 | ACTOR MANAGER : TVA Actor 'Characters/Player/Man/bind.TVA' successfully loaded in 15 ms
+11-04-2012 22:55:12 | TEXTURE MANAGER : Loading of 'Textures/background.dds' successful 'Textures/background.dds' on index 4 
+11-04-2012 22:55:12 | TEXTURE MANAGER : Loading of 'Textures/background.dds' successful 'Textures/background.dds' on index 4 
+11-04-2012 22:55:12 | TEXTURE MANAGER : Loading of 'Textures/windowHeadBasic.dds' successful 'Textures/windowHeadBasic.dds' on index 5 
+11-04-2012 22:55:12 | TEXTURE MANAGER : Loading of 'Textures/windowHeadBasic.dds' successful 'Textures/windowHeadBasic.dds' on index 5 
+11-04-2012 22:55:12 | TEXTURE MANAGER : Loading of 'Textures/closeBasic.dds' successful 'Textures/closeBasic.dds' on index 7 
+11-04-2012 22:55:12 | TEXTURE MANAGER : Loading of 'Textures/closeBasic.dds' successful 'Textures/closeBasic.dds' on index 7 
+11-04-2012 22:55:13 | TEXTURE MANAGER : Loading of 'Textures\Cursors\Arrow.png' successful 'Textures\Cursors\Arrow.png' on index 8 
+11-04-2012 22:55:17 | TEXTURE MANAGER : Loading of 'Textures/windowHeadOver.dds' successful 'Textures/windowHeadOver.dds' on index 9 
+11-04-2012 22:55:17 | TEXTURE MANAGER : Loading of 'Textures/windowHeadOver.dds' successful 'Textures/windowHeadOver.dds' on index 9 
+11-04-2012 22:55:17 | TEXTURE MANAGER : Loading of 'Textures\Cursors\Move.png' successful 'Textures\Cursors\Move.png' on index 10 
+11-04-2012 22:55:17 | TEXTURE MANAGER : Loading of 'Textures/windowHeadClick.dds' successful 'Textures/windowHeadClick.dds' on index 11 
+11-04-2012 22:55:17 | TEXTURE MANAGER : Loading of 'Textures/windowHeadClick.dds' successful 'Textures/windowHeadClick.dds' on index 11 
+11-04-2012 22:55:25 | TEXTURE MANAGER : Loading of 'Textures/closeOver.dds' successful 'Textures/closeOver.dds' on index 12 
+11-04-2012 22:55:25 | TEXTURE MANAGER : Loading of 'Textures/closeOver.dds' successful 'Textures/closeOver.dds' on index 12 
+11-04-2012 22:55:27 | TEXTURE MANAGER : Loading of 'Textures/closeClick.dds' successful 'Textures/closeClick.dds' on index 13 
+11-04-2012 22:55:27 | TEXTURE MANAGER : Loading of 'Textures/closeClick.dds' successful 'Textures/closeClick.dds' on index 13 
+11-04-2012 22:55:27 | TEXTURE MANAGER : Loading of 'Textures/tooltipBG.dds' successful 'Textures/tooltipBG.dds' on index 14 
+11-04-2012 22:55:27 | TEXTURE MANAGER : Loading of 'Textures/tooltipBG.dds' successful 'Textures/tooltipBG.dds' on index 14 
+11-04-2012 22:55:31 | START UNLOAD
+11-04-2012 22:55:32 | RESOURCE MANAGER : Engine successfully unloaded
