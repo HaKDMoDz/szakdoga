@@ -7,6 +7,7 @@ using MTV3D65;
 using core.Collision.Landscape;
 using core.Collision;
 using core.input;
+using core.Domain;
 
 namespace core.Component
 {
@@ -17,6 +18,8 @@ namespace core.Component
         private InputManager inputManager;
         private MouseEvent mouseEvent;
         private TV_3DVECTOR targetPos;
+        private AnimationService animationService;
+        private PlayerService playerService;
 
         public Movement(Game game) : base(game) { }
 
@@ -34,6 +37,14 @@ namespace core.Component
             set
             {
                 controlService = value;
+            }
+        }
+
+        public AnimationService AnimationService
+        {
+            set
+            {
+                animationService = value;
             }
         }
 
@@ -62,7 +73,7 @@ namespace core.Component
             {
                 try
                 {
-                    controlService.turnToTargetDirection(CollisionFactory.getDetectCollision(collResult));
+                    controlService.turnToTargetDirection(playerService.getStatistics(), CollisionFactory.getDetectCollision(collResult));
                     targetPos = collResult.vCollisionImpact;
                 }
                 catch
@@ -70,8 +81,23 @@ namespace core.Component
 
                 }
             }
-            controlService.goToTarget(targetPos);
+            if (controlService.goToTarget(playerService.getStatistics(), targetPos))
+            {
+                animationService.changeAnimation(CharacterAnimationState.RUN, CharacterName.PLAYER);
+            }
+            else
+            {
+                animationService.changeAnimation(CharacterAnimationState.IDLE, CharacterName.PLAYER);
+            }
             base.Update(time);
+        }
+
+        public PlayerService PlayerService
+        {
+            set
+            {
+                playerService = value;
+            }
         }
     }
 }

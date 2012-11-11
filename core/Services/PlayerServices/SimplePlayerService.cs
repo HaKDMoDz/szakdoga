@@ -21,6 +21,7 @@ namespace Services.PlayerServices
         private Accessories accessories;
         private CombatService combatService;
         private Landscape landscape;
+        private Player player;
 
         public Landscape Landscape
         {
@@ -103,6 +104,16 @@ namespace Services.PlayerServices
         public TV_3DVECTOR getLookAtPoint()
         {
             return statistics.LookAtPoint;
+        }
+
+        public void setPosition(TV_3DVECTOR position)
+        {
+            statistics.Position = position;
+        }
+        
+        public Statistics getStatistics()
+        {
+            return statistics;
         }
     }
 }

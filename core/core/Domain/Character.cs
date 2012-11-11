@@ -7,9 +7,11 @@ namespace core.Domain
 {
     public interface Character
     {
+        void heal(float healtPoint);
         void damage(float damage);
         void addBuff();
-        void heal(float healtPoint);
-        void curse();
+        void removeBuff();
+        void addCurse();
+        void removeCurse();
     }
 }

@@ -4,12 +4,13 @@ using System.Linq;
 using System.Text;
 using core.Collision;
 using MTV3D65;
+using core.Domain;
 
 namespace core.Service
 {
     public interface ControlService
     {
-        void goToTarget(TV_3DVECTOR targetPos);
-        void turnToTargetDirection(DetectCollision collision);
+        bool goToTarget(Statistics statistics, TV_3DVECTOR targetPos);
+        void turnToTargetDirection(Statistics statistics, DetectCollision collision);
     }
 }

@@ -77,11 +77,6 @@ namespace core.Domain
             throw new NotImplementedException();
         }
 
-        public void curse()
-        {
-            throw new NotImplementedException();
-        }
-
         public TV_3DVECTOR LookAtPoint
         {
             get
@@ -92,6 +87,21 @@ namespace core.Domain
             {
                 lookAtPoint = value;                    
             }
+        }
+
+        public void removeBuff()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void addCurse()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void removeCurse()
+        {
+            throw new NotImplementedException();
         }
     }
 }

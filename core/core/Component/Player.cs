@@ -8,11 +8,13 @@ using core.Domain;
 
 namespace core.Component
 {
-    public class Player : DrawableGameComponent
+    public class Player : DrawableGameComponent, Actor
     {
-        private TVActor actor;
+        private TVActor tvActor;
+        private CharacterAnimationState animState;
 
         private PlayerService playerService;
+        private AnimationService animationService;
 
         public PlayerService PlayerService
         {
@@ -26,11 +28,19 @@ namespace core.Component
             }
         }
 
+        public AnimationService AnimationService
+        {
+            set
+            {
+                animationService = value;
+            }
+        }
+
         public Player(Game game) : base(game) { }
 
         public override void Update(GameTime time)
         {            
-            actor.LookAtPoint(playerService.getLookAtPoint());
+            tvActor.LookAtPoint(playerService.getLookAtPoint());
             setPosition(playerService.getPosition());
             base.Update(time);
         }
@@ -42,27 +52,54 @@ namespace core.Component
             int IdMat = Game.Materials.CreateLightMaterial(1, 1, 1, 1, 0.025f, 0, "WarriorMat");
             
 
-            actor = Game.Scene.CreateActor("player");
-            actor.LoadTVA("Characters/Player/Man/bind.TVA");
-            actor.SetMaterial(IdMat, -1);
-            actor.SetAnimationLoop(true);
-            actor.SetLightingMode(CONST_TV_LIGHTINGMODE.TV_LIGHTING_NONE, 0, 1);
-            actor.SetScale(15f, 15f, 15f);
+            tvActor = Game.Scene.CreateActor("player");
+            tvActor.LoadTVA("Characters/Player/Man/bind.TVA");
+            tvActor.SetMaterial(IdMat, -1);
+            tvActor.SetLightingMode(CONST_TV_LIGHTINGMODE.TV_LIGHTING_NONE, 0, 1);
+            tvActor.SetScale(15f, 15f, 15f);
             TV_3DVECTOR position = playerService.getPosition();
-            actor.SetPosition(position.x, position.y, position.z);
-            actor.PlayAnimation(1);
+            tvActor.SetPosition(position.x, position.y, position.z);
+
+            animationService.registerActor(CharacterName.PLAYER, this);
+            CharacterAnimState = CharacterAnimationState.AREACAST;
+
+            animationService.changeAnimation(CharacterAnimationState.IDLE, CharacterName.PLAYER);
+
         }
 
         public override void Draw(GameTime time)
         {
-            actor.Render();
+            tvActor.Render();
             base.Draw(time);
         }
 
         private void setPosition(TV_3DVECTOR position)
         {
-            actor.SetPosition(position.x, position.y, position.z);
+            tvActor.SetPosition(position.x, position.y, position.z);
         }
 
+        public CharacterAnimationState CharacterAnimState
+        {
+            get
+            {
+                return animState;
+            }
+            set
+            {
+                animState = value;
+            }
+        }
+
+        public TVActor Actor
+        {
+            get
+            {
+                return tvActor;
+            }
+            set
+            {
+                throw new NotImplementedException();
+            }
+        }
     }
 }

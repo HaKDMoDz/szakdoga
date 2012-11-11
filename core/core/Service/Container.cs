@@ -11,5 +11,6 @@ namespace core.Service
         T getObject<T>(String name);
         void registerObject(String name, Object obj);
         void removeObject(String name);
+        void addComponent(GameComponent component, String name);
     }
 }

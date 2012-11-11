@@ -13,16 +13,15 @@ namespace Services.ControlServices
 {
     public class SimpleControlService : ControlService
     {
-        private Statistics statistics;
         private Landscape landscape;
+        private AnimationService animationService;
 
-        public SimpleControlService(Statistics statistics, Landscape landscape)
+        public SimpleControlService(Landscape landscape)
         {
-            this.statistics = statistics;
             this.landscape = landscape;
         }
 
-        public void goToTarget(TV_3DVECTOR targetPos)
+        public bool goToTarget(Statistics statistics, TV_3DVECTOR targetPos)
         {
             TV_3DVECTOR vec = statistics.Position;
             if (getDistance(vec, targetPos) > 3)
@@ -32,20 +31,25 @@ namespace Services.ControlServices
 
                 TV_3DVECTOR dV2 = new TV_3DVECTOR();
                 float s = frameTime * movementSpeed;
-                Game.Math.TVVec3Scale(ref dV2, getDirection(targetPos), s);
-                
+                Game.Math.TVVec3Scale(ref dV2, getDirection(statistics, targetPos), s);
+
                 Game.Math.TVVec3Add(ref vec, statistics.Position, dV2);
                 vec.y = landscape.GetHeight(vec.x, vec.z);
                 statistics.Position = vec;
+                return true;
+            }
+            else
+            {
+                return false;
             }
         }
 
-        public void turnToTargetDirection(DetectCollision collision)
+        public void turnToTargetDirection(Statistics statistics, DetectCollision collision)
         {
             statistics.LookAtPoint = collision.getTargetPosition();
         }
 
-        private TV_3DVECTOR getDirection(TV_3DVECTOR targetPos)
+        private TV_3DVECTOR getDirection(Statistics statistics, TV_3DVECTOR targetPos)
         {
             var pos = statistics.Position;
             TV_3DVECTOR dVector = new TV_3DVECTOR();
@@ -59,5 +63,6 @@ namespace Services.ControlServices
             float dis = Game.Math.GetDistance3D(player.x, player.y, player.z, target.x, target.y, target.z);
             return dis;
         }
+
     }
 }

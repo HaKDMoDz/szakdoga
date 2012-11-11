@@ -11,8 +11,6 @@ namespace Services.Attack
     {
         public void use(Character target, Skill skill)
         {
-            
-
             target.damage(100);
         }
     }

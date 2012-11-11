@@ -15,6 +15,8 @@ namespace core.Service
         void kill();
         void useSkill(CONST_TV_KEY key);
         TV_3DVECTOR getPosition();
+        void setPosition(TV_3DVECTOR position);
+        Statistics getStatistics();
         TV_3DVECTOR getLookAtPoint();
     }
 }

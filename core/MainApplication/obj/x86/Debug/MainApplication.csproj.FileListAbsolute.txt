@@ -15,4 +15,3 @@ F:\szakdoga\core\MainApplication\bin\Debug\Services.dll
 F:\szakdoga\core\MainApplication\bin\Debug\Services.pdb
 F:\szakdoga\core\MainApplication\bin\Debug\Repositories.dll
 F:\szakdoga\core\MainApplication\bin\Debug\Repositories.pdb
-F:\szakdoga\core\MainApplication\bin\Debug\Squid.dll

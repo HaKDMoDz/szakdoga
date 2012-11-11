@@ -54,7 +54,7 @@ namespace MainApplication.Scenes
 
         protected override void OnUpdate()
         {
-            windowService.showWindow(WindowsName.PLAYERSTAT);
+            //windowService.showWindow(WindowsName.PLAYERSTAT);
 
             base.OnUpdate();
         }

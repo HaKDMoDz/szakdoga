@@ -188,13 +188,11 @@ namespace core
 
         protected virtual void Load()
         {
-            //int percent = 90 / Components.Count;
             int i = 0;
 
             foreach (GameComponent component in Components)
             {
                 component.Load();
-                //loaderScreen.SetProgressBar(i * percent);
                 i++;
             }
         }
